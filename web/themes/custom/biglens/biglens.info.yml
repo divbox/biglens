@@ -1,0 +1,11 @@
+name: The BigLens Theme
+type: theme
+description: 'A responsive theme using bootstrap and based on bootstrap agency theme'
+core: 8.x
+libraries:
+  - 'biglens/bootstrap'
+  - 'biglens/fonts'
+  - 'biglens/base'
+regions:
+  content: Content
+  footer: Footer

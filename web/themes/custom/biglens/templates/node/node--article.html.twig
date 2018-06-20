@@ -1,0 +1,38 @@
+{% set articleDate = node.getCreatedTime|format_date('article_date_format') %}
+{% set articleShortDate = node.getCreatedTime|format_date('article_short_date_format') %}
+{#{ dump(content) }#}
+
+{%
+  set classes = [
+    'node-' ~ node.bundle|clean_class,
+    not node.isPublished() ? 'node--unpublished',
+    'shadow',
+    'p-3',
+    'mb-5',
+    'bg-white',
+    'rounded',
+  ]
+%}
+
+<article{{ attributes.addClass(classes) }}>
+  {{ content.field_featured_photo }}
+  <div class="article-inner">
+    <header>
+      <h1>{{ node.title.value }}</h1>
+      <div>
+        <a href="#" class="gravatar rounded-circle" style="background-image: url({{ content.author_image }})"></a>
+        <a href="#" rel="author">{{ content.author_name }}</a> 
+        <time itemprop="dateCreated" datetime="{{ articleShortDate }}"> {{ articleDate }}</time>
+      </div>
+    </header>
+
+    {{ content.field_body.0 }}
+
+    <footer>
+      <div class="tags">
+        {{ content.field_tags }}
+      </div>
+    </footer>
+
+  </div>
+</article>

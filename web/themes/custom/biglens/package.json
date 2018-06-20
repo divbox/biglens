@@ -1,0 +1,28 @@
+{
+  "name": "biglens",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.php",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/divbox/d8biglens.git"
+  },
+  "author": "div@divbox.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/divbox/d8biglens/issues"
+  },
+  "homepage": "https://github.com/divbox/d8biglens#readme",
+  "devDependencies": {
+    "browser-sync": "^2.24.4",
+    "gulp": "^4.0.0",
+    "gulp-sass": "^4.0.1",
+    "gulp-uglify": "^3.0.0"
+  },
+  "dependencies": {
+    "startbootstrap-agency": "^4.0.0-beta"
+  }
+}

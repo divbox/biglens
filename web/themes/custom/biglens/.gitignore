@@ -1,0 +1,4 @@
+# Ignore node_modules and assets dir
+node_modules
+vendor
+assets

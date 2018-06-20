@@ -1,0 +1,25 @@
+base:
+  version: 1.x
+  css:
+    theme:
+      'assets/css/style.css': {}
+bootstrap:
+  version: 1.x
+  css:
+    theme:
+      'assets/css/bootstrap.css': {}
+  js:
+    'assets/vendor/popper/popper.min.js': {}
+    'assets/vendor/bootstrap/js/bootstrap.min.js': {}
+    'assets/vendor/jquery-easing/jquery.easing.min.js': {}
+    'assets/vendor/bootstrap/js/agency.min.js': {}
+  dependencies:
+    - core/jquery
+fonts:
+  css:
+    theme:
+      'assets/vendor/font-awesome/css/font-awesome.min.css': {}
+      '//fonts.googleapis.com/css?family=Montserrat:400,700': { type: external, minified: true }
+      '//fonts.googleapis.com/css?family=Kaushan+Script': { type: external, minified: true }
+      '//fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic': { type: external, minified: true }
+      '//fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700': { type: external, minified: true }

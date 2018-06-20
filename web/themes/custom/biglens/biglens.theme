@@ -1,0 +1,14 @@
+<?php
+
+function biglens_preprocess_page(&$variables)
+{
+    $footer_text = t('&copy;@year Big Lens, Inc.', array('@year' => date('Y')));
+    addContentVariable($variables, 'footer_text', $footer_text);
+    // dpm($variables['node']);
+}
+
+function addContentVariable(array &$variables, string $key, $value)
+{
+    // add a key/value pair to $variables['content'] for templates
+    $variables['content'][$key] = $value;
+}
