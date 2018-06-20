@@ -5,7 +5,6 @@
 /drush/sites/self.site.yml
 /drush/Commands/PolicyCommands.php
 /vendor/
-/scripts/composer/
 /web/core/
 /web/modules/contrib/
 /web/themes/contrib/
