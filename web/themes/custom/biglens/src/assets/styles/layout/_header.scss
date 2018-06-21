@@ -1,0 +1,57 @@
+.header-main {
+  height: 70px;
+  background-color: theme-color('darkerred');
+  @include media-breakpoint-up(md) {
+    height: 72px;
+    margin: 0 0 60px;
+  }
+  nav {
+    display: none;
+    float: left;
+    margin: 24px 0 0 15px;
+    @include media-breakpoint-up(md) {
+      display: block;
+    }
+    ul {
+      margin: 0;
+      padding: 0;
+    }
+    li {
+      float: left;
+      list-style: none;
+    }
+    a {
+      display: inline-block;
+      font-family: $sans-serif-narrow;
+      color: white;
+      text-transform: uppercase;
+      padding: 5px 10px;
+      font-size: 14px;
+    }
+  }
+  .logo {
+    width: 80px;
+    margin: 10px 0 0 14px;
+    float: left;
+    @include media-breakpoint-up(md) {
+      width: auto;
+    }
+    img {
+      display: block;
+      max-width: 100%;
+    }
+  }
+  .search {
+    display: none;
+    @extend .ir;
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background: url(../images/search.png) no-repeat center center / 50%;
+    top: 17px;
+    right: 10px;
+    @include media-breakpoint-up(md) {
+      display: block;
+    }
+  }
+}

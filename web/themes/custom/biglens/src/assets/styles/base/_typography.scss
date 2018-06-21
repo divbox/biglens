@@ -1,0 +1,38 @@
+// font families 
+$serif: Georgia, Times, "Times New Roman", serif;
+$sans-serif: Arial, sans-serif;
+$sans-serif-narrow: "Arial Narrow", Arial, sans-serif;
+
+::selection {
+  background: theme-color('dishred'); /* WebKit/Blink Browsers */
+  color: color('black');
+}
+
+::-moz-selection {
+  background: theme-color('dishred'); /* Gecko Browsers */
+  color: color('black');
+}
+
+.main .node {
+  h1, h2, h3, h4, h5, h6 {
+    font-family: $sans-serif-narrow;
+  }
+  h1 {
+    color: theme-color('darkred');
+  }
+  h2 {
+    color: #444;
+  }
+  a {
+    &:hover {
+      text-decoration: underline
+    }
+  }
+  header {
+    div {
+      margin: 1em 0;
+      font-size: 16px;
+      color: #999;
+    }
+  }
+}

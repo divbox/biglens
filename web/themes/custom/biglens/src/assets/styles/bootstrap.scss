@@ -1,0 +1,27 @@
+@charset "UTF-8";
+
+.ir {
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+$theme-colors: (
+    "dishred": #b20f0f,
+    "darkerred": #560303,
+    "primary": #b20f0f,
+    "brightred": #d01111,
+    "red": #b20f0f,
+    "darkred": #951515,
+    "black": #222
+);
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 1200px,
+  xl: 1600px
+);
+
+@import "../../../node_modules/bootstrap/scss/bootstrap";

@@ -1,0 +1,35 @@
+.footer-main {
+  background: theme-color('darkerred');
+  padding: 1em;
+  font-family: $sans-serif;
+  text-align: center;
+  color: white;
+  padding: 1em 0;
+  @include media-breakpoint-up(md) {
+    padding: 2em 0;
+  }
+  ul {
+    margin: 0 0 2em;
+    padding: 0;
+    @include media-breakpoint-up(md) {
+      margin: 0 0 1em;
+    }
+  }
+  li {
+    list-style: none;
+    @include media-breakpoint-up(md) {
+      display: inline;
+      margin: 0 .4em;
+    }
+  }
+  a {
+    text-decoration: none;
+    color: white;
+    display: inline-block;
+    font-size: 16px;
+    padding: .4em;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

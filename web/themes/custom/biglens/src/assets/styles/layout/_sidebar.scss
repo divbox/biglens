@@ -1,0 +1,46 @@
+.sidebar {
+  padding: 0 1em;
+  @include media-breakpoint-up(md) {
+    padding: 0;
+  }
+  .tile {
+    margin-bottom: 1em;
+    @include box-shadow(inset 0 4px 10px rgba(0, 0, 0, 0.5));
+    border: 1px solid rgba(0,0,0,.09);
+    background: #ddd;
+    text-align: center;
+    @include border-radius(3px);
+    .latest {
+        background: #fff;
+        h1, p {
+            padding-left: 2em;
+            padding-right: 2em;
+        }
+        h1 {
+            margin: 0;
+            padding-top: 1em;
+            padding-bottom: .2em;
+            font-size: $h4-font-size;
+            font-family: $sans-serif-narrow;
+        }
+        .views-row {
+            &:before {
+                left: 20%;
+                right: 20%; 
+            }
+            &:hover {
+                background: #eee;
+            }
+        }
+    }
+    h2 {
+        color: white;
+        font-family: $sans-serif;
+        text-transform: uppercase;
+        background: theme-color('darkred');
+        padding: .4em 0;
+        margin: 0;
+        font-weight: normal;
+    }
+  }
+}
