@@ -10,7 +10,10 @@ header.masthead {
   background-image: url('../vendor/bootstrap/images/map-image.png');
   background-color: #222222;
   background-repeat: no-repeat;
-  background-position: center
+  background-position: center;
+  h2 {
+    color: #fff;
+  }
 }
 
 // Base
