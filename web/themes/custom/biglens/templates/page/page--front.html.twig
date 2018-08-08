@@ -1,5 +1,11 @@
 {#{ dump() }#}
 
+<style>
+header.masthead {
+  background-image: url({{ content.masthead|raw }});
+}
+</style>
+
 {% include '@biglens/partials/nav.html.twig' %}
 
 {{ drupal_view('home_page_hero', 'block_1') }}
