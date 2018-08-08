@@ -1,6 +1,32 @@
 <?php
 
+use Drupal\Component\Utility\XSS;
+
 function biglens_preprocess_page(&$variables)
+{
+    $footer_text = t('&copy;@year Big Lens, Inc.', array('@year' => date('Y')));
+    addContentVariable($variables, 'footer_text', $footer_text);
+
+    $mh = 'default';
+    $mh = XSS::filter($_GET['mh'] ?? 'default');
+
+    $mastheads = [
+      'default' => '/sites/default/files/2018-08/option1.jpg',
+      'a' => '/sites/default/files/2018-08/option1.jpg',
+      'b' => '/sites/default/files/2018-08/option2.jpg',
+      'c' => '/sites/default/files/2018-08/option3.jpg',
+      'd' => '/sites/default/files/2018-08/option4.jpg',
+      'e' => '/sites/default/files/2018-08/option5.jpg',
+      'f' => '/sites/default/files/2018-08/option6.jpg',
+      'g' => '/sites/default/files/2018-08/option7.jpg',
+    ];
+
+    addContentVariable($variables, 'masthead', $mastheads[$mh]);
+
+    // dpm($variables['node']);
+}
+
+function biglens_preprocess_node(&$variables)
 {
     $footer_text = t('&copy;@year Big Lens, Inc.', array('@year' => date('Y')));
     addContentVariable($variables, 'footer_text', $footer_text);
