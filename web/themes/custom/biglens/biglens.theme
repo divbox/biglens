@@ -1,14 +1,17 @@
 <?php
 
-use Drupal\Component\Utility\XSS;
+use Drupal\Component\Utility\Xss;
 
 function biglens_preprocess_page(&$variables)
 {
+
+    $site_name = \Drupal::config('system.site')->get('name');
+    addContentVariable($variables, 'site_name', $site_name);
+
     $footer_text = t('&copy;@year Big Lens, Inc.', array('@year' => date('Y')));
     addContentVariable($variables, 'footer_text', $footer_text);
 
-    $mh = 'default';
-    $mh = XSS::filter($_GET['mh'] ?? 'default');
+    $mh = Xss::filter($_GET['mh'] ?? 'default');
 
     $mastheads = [
       'default' => '/sites/default/files/2018-08/option1.jpg',
