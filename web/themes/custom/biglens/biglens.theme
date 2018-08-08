@@ -1,12 +1,21 @@
 <?php
 
+/**
+ * @file
+ * Functions to support theming in the BigLens theme.
+ */
+
 use Drupal\Component\Utility\Xss;
+
+/**
+ * Implements preprocess_page().
+ */
 
 function biglens_preprocess_page(&$variables)
 {
 
-    $site_name = \Drupal::config('system.site')->get('name');
-    addContentVariable($variables, 'site_name', $site_name);
+    // $site_name = \Drupal::config('system.site')->get('name');
+    // addContentVariable($variables, 'site_name', $site_name);
 
     $footer_text = t('&copy;@year Big Lens, Inc.', array('@year' => date('Y')));
     addContentVariable($variables, 'footer_text', $footer_text);
@@ -26,13 +35,6 @@ function biglens_preprocess_page(&$variables)
 
     addContentVariable($variables, 'masthead', $mastheads[$mh]);
 
-    // dpm($variables['node']);
-}
-
-function biglens_preprocess_node(&$variables)
-{
-    $footer_text = t('&copy;@year Big Lens, Inc.', array('@year' => date('Y')));
-    addContentVariable($variables, 'footer_text', $footer_text);
     // dpm($variables['node']);
 }
 
