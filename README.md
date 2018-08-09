@@ -25,6 +25,7 @@ $ cd biglens && git checkout develop
 
 ```
 $biglens: composer install
+
 If for some reason the drupal scafold files are missing, you may need to run the following:
 $biglens: composer drupal:scaffold
 ```
@@ -44,4 +45,19 @@ $biglens/web/themes/custom/biglens: ./node_modules/gulp/bin/gulp.js
 ```
 ## HTTPS
 
-* Certs are manged by LetsEncrypt using certbot python tool on the production hosts
+* Certs are manged by LetsEncrypt(https://letsencrypt.org/) using certbot python tool on the production hosts
+
+## Environment Variables Needed
+
+```
+* MYSQL_DATABASE='d8_biglens'
+* MYSQL_HOSTNAME='localhost'
+* MYSQL_PASSWORD='root'
+* MYSQL_PORT='3306'
+* MYSQL_USER='root'
+```
+
+```
+# Another common use case is to set Drush's --uri via environment.
+DRUSH_OPTIONS_URI=http://thebiglens.test (use your local domain here)
+```
