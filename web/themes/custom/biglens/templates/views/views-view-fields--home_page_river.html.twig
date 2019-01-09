@@ -1,7 +1,7 @@
-<section id="{{ fields.title.content|replace({' ': '-', ' & ': '-', '&amp;': '-'})|lower }}">
+<section class="bg-light" id="{{ fields.title.content|replace({' ': '-', ' & ': '-', '&amp;': '-'})|lower }}">
   <div class="container">
     <div class="row">
-      <div class="col text-center">
+      <div class="col text-center div-{{ fields.counter.content }}">
         <h2 class="section-heading">{{ fields.title.content }}</h2>
         {% if fields.field_module_sub_heading.content %}
           <h3 class="section-subheading">{{ fields.field_module_sub_heading.content }}</h3>
@@ -11,3 +11,4 @@
     {{ fields.field_module_content.content }}
   </div>
 </section>
+
